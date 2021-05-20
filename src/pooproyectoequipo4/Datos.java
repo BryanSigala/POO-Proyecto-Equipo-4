@@ -14,7 +14,7 @@ public class Datos {
         this.ingresosdiarios = ingresosdiarios;
         this.egresosdiarios = egresosdiarios;
     }
-    
+
     public void PedirDatos () {
         NombreEmpresa = JOptionPane.showInputDialog("Ingrese el Nombre de su empresa: ");
         ingresosdiarios = Double.parseDouble(JOptionPane.showInputDialog("¿Cuántos son los 'ingresos' diarios en su empresa? "));

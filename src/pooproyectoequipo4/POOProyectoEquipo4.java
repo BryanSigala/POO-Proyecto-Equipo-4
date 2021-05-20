@@ -26,6 +26,11 @@ public class POOProyectoEquipo4 {
        Totales.Mensuales(30, datos.ingresosdiarios);
        Totales.Anuales(365, datos.ingresosdiarios);
     
+       Egresos Final = new Egresos();
+       Final.SemanalesEgresos(7, datos.egresosdiarios);
+       Final.MensualesEgresos(30, datos.egresosdiarios);
+       Final.AnualesEgresos(365, datos.egresosdiarios);
+       
     }
     
 }

@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author anacr
- */
+ */ 
 public class Ingresos {
 
     public void Semanales(int Sem, double ingresosdiarios) {
