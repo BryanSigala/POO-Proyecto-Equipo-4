@@ -15,6 +15,8 @@ public class Pruebas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        //Figuras Hola
         Rectangulo r1 = new Rectangulo(2.0, 4.0);
         System.out.println("Rectangulo");
 
