@@ -30,7 +30,7 @@ public class POOProyectoEquipo4 {
        Total.SemanalesEgresos(7,datos.egresosdiarios);
        Total.MensualesEgresos(30, datos.egresosdiarios);
        Total.AnualesEgresos(365, datos.egresosdiarios);
-    
+       //Prueba de actualizacion
        Salida salida = new Salida();
        salida.Ingresos();
        salida.Egresos();
