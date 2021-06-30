@@ -2,40 +2,37 @@ package pooproyectoequipo4;
 
 import javax.swing.JOptionPane;
 
-public class Salida {
+public class Salida extends Datos{
     
+    public Salida(String NombreEmpresa ,double ingresosdiarios, double egresosdiarios){
+        super(NombreEmpresa ,ingresosdiarios,egresosdiarios);
+    }
+    public Salida(){
+        
+    }
     
-    public void Ingresos(){
+    Ingresos ingreso = new Ingresos();
+    Egresos egreso = new Egresos();
+    
+    public void SalidaResultados(double ingresosdiarios, double egresosdiarios, String NombreEmpresa){
         
-        Datos datos = new Datos();
-        datos.PedirDatos();
-
-        JOptionPane.showMessageDialog(null, "Ingresos semanales ");
-        Ingresos Semana= new Ingresos();
-        Semana.Semanales(7, datos.ingresosdiarios);
-        JOptionPane.showMessageDialog(null, "Ingresos mensuales ");
-        Ingresos Mes=new Ingresos();
-        Mes.Mensuales(30, datos.ingresosdiarios);
-        JOptionPane.showMessageDialog(null, "Ingresos anuales ");
-        Ingresos Año=new Ingresos();
-        Año.Anuales(365, datos.ingresosdiarios);
-        
+        //Llamar a las clases para los calculos
+        ingreso.Semanales(7, ingresosdiarios);
+        ingreso.Mensuales(30, ingresosdiarios);
+        ingreso.Anuales(365, ingresosdiarios);
+        egreso.SemanalesEgresos(7, egresosdiarios);
+        egreso.MensualesEgresos(30, egresosdiarios);
+        egreso.AnualesEgresos(365, egresosdiarios);
+        //Salida en JOption para los resultados
+        JOptionPane.showMessageDialog(null, "Reporte de flujos de dinero de '" + NombreEmpresa + "' .-\n"
+                + "\nIngresos semanales: $" + ingreso.Ingresos_Semanales
+                + "\nIngresos mensuales: $" + ingreso.Ingresos_Mensuales
+                + "\nIngresos Anuales:   $" + ingreso.Ingresos_Anuales
+                + "\n"
+                + "\nEgresos Semanales: $" + egreso.EgresosSemanales
+                + "\nEgresos Mensuales: $" + egreso.EgresosMensuales
+                + "\nEgresos Anuales:   $" + egreso.EgresosAnuales, "Reporte", JOptionPane.INFORMATION_MESSAGE);
         
 }
     
-    public void Egresos(){
-        
-        Datos datos = new Datos();
-        datos.PedirDatos();
-
-        JOptionPane.showMessageDialog(null, "Egresos semanales ");
-        Egresos Semanal= new Egresos();
-        Semanal.SemanalesEgresos(7, datos.egresosdiarios);
-        JOptionPane.showMessageDialog(null, "Egresos mensuales ");
-        Egresos Mensual=new Egresos();
-        Mensual.MensualesEgresos(30, datos.egresosdiarios);
-        JOptionPane.showMessageDialog(null, "Egresos anuales ");
-        Egresos Anual=new Egresos();
-        Anual.AnualesEgresos(365, datos.egresosdiarios);
- }
 }

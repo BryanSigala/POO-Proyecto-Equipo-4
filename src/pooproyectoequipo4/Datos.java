@@ -9,7 +9,10 @@ public class Datos {
     protected String NombreEmpresa;
     protected double ingresosdiarios, egresosdiarios;
     
-    public Datos() {
+    public Datos(String NombreEmpresa, double ingresosdiarios, double egresosdiarios) {
+        
+    }
+    public Datos(){
         this.NombreEmpresa = NombreEmpresa;
         this.ingresosdiarios = ingresosdiarios;
         this.egresosdiarios = egresosdiarios;
@@ -19,7 +22,7 @@ public class Datos {
         NombreEmpresa = JOptionPane.showInputDialog("Ingrese el Nombre de su empresa: ");
         ingresosdiarios = Double.parseDouble(JOptionPane.showInputDialog("¿Cuántos son los 'ingresos' diarios en su empresa? "));
         egresosdiarios = Double.parseDouble(JOptionPane.showInputDialog("¿Cuántos son los 'egresos' diarios en su empresa? "));
-        System.out.println("Nombre de la empresa:" +NombreEmpresa+"\n"+"Ingresos diarios: "+ ingresosdiarios +"\n"+"Egresos diarios: "+egresosdiarios); //Salida de consola para comprobar si funciona bien el codigo
+        //System.out.println("Nombre de la empresa:" +NombreEmpresa+"\n"+"Ingresos diarios: "+ ingresosdiarios +"\n"+"Egresos diarios: "+egresosdiarios); //Salida de consola para comprobar si funciona bien el codigo
         
     }
    

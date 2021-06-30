@@ -21,19 +21,18 @@ public class POOProyectoEquipo4 {
         Datos datos = new Datos();
         datos.PedirDatos();
         
-       Ingresos Totales= new Ingresos();
+       Ingresos Totales= new Ingresos(datos.NombreEmpresa, datos.ingresosdiarios, datos.egresosdiarios);
        Totales.Semanales(7,datos.ingresosdiarios);
        Totales.Mensuales(30, datos.ingresosdiarios);
        Totales.Anuales(365, datos.ingresosdiarios);
        
-       Egresos Total= new Egresos();
+       Egresos Total= new Egresos(datos.NombreEmpresa, datos.ingresosdiarios, datos.egresosdiarios);
        Total.SemanalesEgresos(7,datos.egresosdiarios);
        Total.MensualesEgresos(30, datos.egresosdiarios);
        Total.AnualesEgresos(365, datos.egresosdiarios);
        //Prueba de actualizacion
        Salida salida = new Salida();
-       salida.Ingresos();
-       salida.Egresos();
+       salida.SalidaResultados(datos.ingresosdiarios,datos.egresosdiarios, datos.NombreEmpresa);
        
     }
     
