@@ -4,18 +4,25 @@ import javax.swing.JOptionPane;
 /*
 **@author Brandon Leyva, Marco Ortega
 */
-public class Salida extends Datos{
+public class Salida extends Datos{ //Inicio de clase Salida que hereda de la clase Datos
     
-    double diferencia;
-    String nota;
-    
-    public Salida(String NombreEmpresa ,double ingresosdiarios, double egresosdiarios){
-        super(NombreEmpresa ,ingresosdiarios,egresosdiarios);
+    //Constructores de la clase Salida
+    public Salida(String NombreEmpresa ,double ingresosdiarios, double egresosdiarios,
+            double EgresosSemanales,double EgresosMensuales, double EgresosAnuales,
+            double Ingresos_Semanales, double Ingresos_Mensuales, double Ingresos_Anuales,
+            String nota, double diferencia){ //Inicia constructor con super
+        //Herencia de atributos
+        super(NombreEmpresa ,ingresosdiarios,egresosdiarios, 
+                EgresosSemanales,EgresosMensuales, EgresosAnuales,
+                Ingresos_Semanales, Ingresos_Mensuales, Ingresos_Anuales,
+                nota, diferencia);
+        //Guardar memoria para atributos a usar en esta clase
         this.diferencia = diferencia;
         this.nota = nota;
-    }
+    } //Termina el constructor con super
+    
     public Salida(){
-        
+        //Constructor vacio
     }
     
     //Llamar a las clases para los calculos
@@ -24,7 +31,7 @@ public class Salida extends Datos{
     
     public void SalidaResultados(double ingresosdiarios, double egresosdiarios, String NombreEmpresa){
         nota = "";
-        //Llamar a los metodos de los calculos
+        //Llamar a los metodos de los calculos de ingresos y egresos
         ingreso.ingresosSemanales(7, ingresosdiarios);
         ingreso.ingresosMensuales(30, ingresosdiarios);
         ingreso.ingresosAnuales(365, ingresosdiarios);
@@ -33,7 +40,9 @@ public class Salida extends Datos{
         egreso.AnualesEgresos(365, egresosdiarios);
         
         //Calculo para averiguar si hubo perdida o ganacia durante el año
-        diferencia = ingreso.Ingresos_Anuales - egreso.EgresosAnuales;
+        diferencia = ingreso.Ingresos_Anuales - egreso.EgresosAnuales; //Se resta lo que ingreso en el año menos lo que egreso durante el año.
+        
+        //Condicion para averiguar si el ingreso fue mayor a lo ganado, o viceversa.
         if(diferencia > 0){
             nota += "Tuvo ganancia de: $" + diferencia + " en el año.";
         }else if(diferencia < 0){
@@ -54,6 +63,6 @@ public class Salida extends Datos{
                 + "\n\n"
                 + nota, "Reporte", JOptionPane.INFORMATION_MESSAGE);
         
-}
+} //Fin del metodo SalidaResultados.
     
-}
+} //Fin de la clase Salida

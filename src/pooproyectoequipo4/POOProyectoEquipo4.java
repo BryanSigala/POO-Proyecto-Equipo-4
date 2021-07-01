@@ -21,12 +21,12 @@ public class POOProyectoEquipo4 {
         Datos datos = new Datos();
         datos.PedirDatos();
         
-       Ingresos Totales= new Ingresos(datos.NombreEmpresa, datos.ingresosdiarios, datos.egresosdiarios);
+       Ingresos Totales= new Ingresos();
        Totales.ingresosSemanales(7,datos.ingresosdiarios);
        Totales.ingresosMensuales(30, datos.ingresosdiarios);
        Totales.ingresosAnuales(365, datos.ingresosdiarios);
        
-       Egresos Total= new Egresos(datos.NombreEmpresa, datos.ingresosdiarios, datos.egresosdiarios);
+       Egresos Total= new Egresos();
        Total.SemanalesEgresos(7,datos.egresosdiarios);
        Total.MensualesEgresos(30, datos.egresosdiarios);
        Total.AnualesEgresos(365, datos.egresosdiarios);

@@ -2,9 +2,10 @@
 package pooproyectoequipo4;
 
 /**
- * @author Envy
+ * @author BryanSigala
  */
-public abstract class ProyectoPOO implements MetodosDatos,MetodosIngresos,MetodosEgresos {
+//Inicio de clase abstracta ProyectoPOO que se implementan las interfaces de MetodosDatos,MetodosIngresos,MetodosEgresos
+public abstract class ProyectoPOO implements MetodosDatos,MetodosIngresos,MetodosEgresos { 
     
     //Delaracion de todos los atributos que se usan en el programa
     protected String NombreEmpresa, nota;
@@ -13,38 +14,50 @@ public abstract class ProyectoPOO implements MetodosDatos,MetodosIngresos,Metodo
             Ingresos_Semanales, Ingresos_Mensuales, Ingresos_Anuales,
             diferencia;
     
+    
     //Declaracion de metodos que se usaran en todo el programa
     @Override
     public void PedirDatos(){
         
     }
+    //Fin de metodo de clase Datos
+    
     @Override
-    public void SemanalesEgresos(){
+    public void SemanalesEgresos(int semna, double egresosdiarios){
         
     }
+    
     @Override
-    public void MensualesEgresos(){
+    public void MensualesEgresos(int menss, double egresosdiarios){
         
     }
+    
     @Override
-    public void AnualesEgresos(){
+    public void AnualesEgresos(int anua, double egresosdiarios){
         
     }
+    //Fin de metodos de clase Egresos
+    
     @Override
-    public void ingresosSemanales(){
+    public void ingresosSemanales(int Sem, double ingresosdiarios){
         
     }
+    
     @Override
-    public void ingresosMensuales(){
+    public void ingresosMensuales(int Men, double ingresosdiarios){
         
     }
+    
     @Override
-    public void ingresosAnuales(){
+    public void ingresosAnuales(int Anuales, double ingresosdiarios){
         
     }
+    //Fin de metodos de clase Ingresos
+    
     @Override
     public void SalidaResultados(){
         
     }
+    //Fin de metodos de clase Salida
     
-}
+}//Fin de clase abstracta ProyectoPOO
