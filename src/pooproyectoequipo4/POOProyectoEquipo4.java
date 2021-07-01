@@ -22,9 +22,9 @@ public class POOProyectoEquipo4 {
         datos.PedirDatos();
         
        Ingresos Totales= new Ingresos(datos.NombreEmpresa, datos.ingresosdiarios, datos.egresosdiarios);
-       Totales.Semanales(7,datos.ingresosdiarios);
-       Totales.Mensuales(30, datos.ingresosdiarios);
-       Totales.Anuales(365, datos.ingresosdiarios);
+       Totales.ingresosSemanales(7,datos.ingresosdiarios);
+       Totales.ingresosMensuales(30, datos.ingresosdiarios);
+       Totales.ingresosAnuales(365, datos.ingresosdiarios);
        
        Egresos Total= new Egresos(datos.NombreEmpresa, datos.ingresosdiarios, datos.egresosdiarios);
        Total.SemanalesEgresos(7,datos.egresosdiarios);

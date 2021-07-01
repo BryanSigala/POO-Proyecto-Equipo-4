@@ -20,7 +20,7 @@ public class Ingresos extends Datos{
         
     }
     
-    public void Semanales(int Sem, double ingresosdiarios) {
+    public void ingresosSemanales(int Sem, double ingresosdiarios) {
         
         //Para calcular los ingresos semanales
         Ingresos_Semanales = (Sem * ingresosdiarios);
@@ -28,7 +28,7 @@ public class Ingresos extends Datos{
 
     }
 
-    public void Mensuales(int Men, double ingresosdiarios) {
+    public void ingresosMensuales(int Men, double ingresosdiarios) {
         
         //Para calcular los ingresos mensuales
         Ingresos_Mensuales = (Men * ingresosdiarios);
@@ -36,7 +36,7 @@ public class Ingresos extends Datos{
 
     }
 
-    public void Anuales(int Anuales, double Ingresos_diarios) {
+    public void ingresosAnuales(int Anuales, double Ingresos_diarios) {
         
         //Para calcular los ingresos anuales
         Ingresos_Anuales = (Anuales * Ingresos_diarios);

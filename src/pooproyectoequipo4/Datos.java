@@ -2,7 +2,9 @@
 package pooproyectoequipo4;
 
 import javax.swing.JOptionPane;
-
+/**
+*@author BryanSigala
+*/
 
 public class Datos {
     //Se declaran atributos
