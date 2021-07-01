@@ -1,0 +1,16 @@
+___ROUND BUSINESS 2021___
+
+Reporte de flujos de dinero de la empresa: 
+** hola **
+
+Ingresos semanales: $7000.0
+Ingresos mensuales: $30000.0
+Ingresos Anuales:   $365000.0
+
+Egresos Semanales: $1400.0
+Egresos Mensuales: $6000.0
+Egresos Anuales:   $73000.0
+
+Tuvo ganancia de: $292000.0 en el año.
+
+OJO: Estos datos son reales solo si los ingresos y egresos diarios se mantienen iguales.

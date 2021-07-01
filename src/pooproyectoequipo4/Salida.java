@@ -1,5 +1,10 @@
 package pooproyectoequipo4;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 /*
 **@author Brandon Leyva, Marco Ortega
@@ -62,6 +67,38 @@ public class Salida extends Datos{ //Inicio de clase Salida que hereda de la cla
                 + "\nEgresos Anuales:   $" + egreso.EgresosAnuales
                 + "\n\n"
                 + nota, "Reporte", JOptionPane.INFORMATION_MESSAGE);
+        
+        //Se crea el archivo .txt con los resultados
+        File file = new File("Reporte de flujo de dinero.txt");{ //Inicia ejecucion de creacion o edicion de un archivo txt con los resultados mostrados.
+        try { //Inicia el bloque de excepcion.
+            boolean fileCreated = file.createNewFile();
+            FileWriter filewriter = new FileWriter(file); //Para escribir los resultados sobre el archivo txt.
+            filewriter.write("___ROUND BUSINESS 2021___"+"\n"+"\n"+"Reporte de flujos de dinero de la empresa: "+"\n"
+                    +"** "+ NombreEmpresa +" **"+"\n"
+                    +"\nIngresos semanales: $" + ingreso.Ingresos_Semanales 
+                    + "\nIngresos mensuales: $" + ingreso.Ingresos_Mensuales
+                    + "\nIngresos Anuales:   $" + ingreso.Ingresos_Anuales
+                    + "\n"
+                            + "\nEgresos Semanales: $" + egreso.EgresosSemanales
+                    + "\nEgresos Mensuales: $" + egreso.EgresosMensuales
+                    + "\nEgresos Anuales:   $" + egreso.EgresosAnuales
+                    + "\n\n"+ nota+"\n"+"\n"+"OJO: Estos datos son reales solo si los ingresos y egresos diarios se mantienen iguales.");
+            filewriter.close();
+            if(fileCreated){ //Mensaje a mostrar en caso de que se creara un archivo con los resultados.
+                JOptionPane.showMessageDialog(null, "El archivo se creo correctamente."
+                        + "\nEl reporte de resultados ha sido guardado en el archivo: ......... " + file.getName()
+                        + "\nLa ruta de guardado de los resultados es: \n" + file.getAbsolutePath()
+                        + "\n\nPuede cambiar el nombre del archivo o moverlo de lugar. \n Buen día.", "Resultados guardados", JOptionPane.INFORMATION_MESSAGE);
+            }else{ //Mensaje  a mostrar en caso de que el archivo ya existiera y que fue editado su contenido con los nuevos resultados.
+                JOptionPane.showMessageDialog(null, "Los resultados se llevaron a un archivo que ya existía y su contenido ha sido modificado con los resultados actuales."
+                        + "\nEl reporte de resultados ha sido guardado en el archivo: ......... " + file.getName()
+                        + "\nLa ruta de guardado de los resultados es: \n" + file.getAbsolutePath()
+                        + "\n\nPuede cambiar el nombre del archivo o moverlo de lugar. \n Buen día.", "Resultados guardados", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Salida.class.getName()).log(Level.SEVERE, null, ex);
+        } //Termina el bloque de excepcion.
+    }//Fin de ejecucion para la creacion o edicion de archivo txt.
         
 } //Fin del metodo SalidaResultados.
     
